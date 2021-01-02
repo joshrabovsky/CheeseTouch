@@ -1,5 +1,0 @@
-# CheeseTouch
-
-# Figma
-
-# Rules
