@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:917953646716:android:fb544467f86e5a7614f9f9",
+        "mobilesdk_app_id": "1:917953646716:android:20d035ee7dc6e94e14f9f9",
         "android_client_info": {
-          "package_name": "com.founders.cheesetouch"
+          "package_name": "com.example.CheeseTouch"
         }
       },
       "oauth_client": [
