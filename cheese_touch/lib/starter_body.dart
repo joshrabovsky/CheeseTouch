@@ -10,7 +10,7 @@ class StarterBody extends StatefulWidget {
 }
 
 class _StarterBodyState extends State<StarterBody> {
-  var isInfected = true;
+  var isInfected = false;
 
   Map<String, Object> starterDesignInfected = {
     "status": "INFECTED",
@@ -23,7 +23,7 @@ class _StarterBodyState extends State<StarterBody> {
     "status": "NOT INFECTED",
     "color": Colors.white,
     "border": Color(0xffF4E04D),
-    "image": "assets/images/normalcheese.png",
+    "image": "assets/images/normalcheesefixed.png",
   };
 
   @override
