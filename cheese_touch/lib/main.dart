@@ -2,30 +2,30 @@ import 'package:flutter/material.dart';
 
 import "./starter_body.dart";
 
-void main() {
-  runApp(MyApp());
+void Run() {
+  runApp(App());
 }
 
 //test comment :)
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: MyHome(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHome extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyHomeState createState() => _MyHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomeState extends State<MyHomePage> {
   final Color mainColor = Color(0xff231651);
 
   // final AppBar appBar = AppBar(
