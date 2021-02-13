@@ -1,4 +1,5 @@
-import 'package:CheeseTouch/screens/auth_screen.dart';
+import 'package:CheeseTouch/Screens/Welcome/welcome_screen.dart';
+import 'package:CheeseTouch/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,8 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'CheeseTouch',
-      home: AuthScreen(),
+      home: WelcomeScreen(),
+      theme: ThemeData(
+        fontFamily: "Inconsolata",
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }
