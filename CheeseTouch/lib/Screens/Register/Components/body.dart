@@ -2,7 +2,6 @@ import 'package:CheeseTouch/Components/auth_input.dart';
 import 'package:CheeseTouch/Components/auth_password.dart';
 import 'package:CheeseTouch/Components/back_button.dart';
 import 'package:CheeseTouch/Components/background.dart';
-import 'package:CheeseTouch/Components/login_button.dart';
 import 'package:CheeseTouch/Components/logo.dart';
 import 'package:CheeseTouch/Components/register_button.dart';
 import 'package:flutter/material.dart';

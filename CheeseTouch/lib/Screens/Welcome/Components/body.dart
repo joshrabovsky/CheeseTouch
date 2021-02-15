@@ -10,48 +10,50 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size; // Total height and width
     return Background(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Image.asset("assets/images/cheese.png"),
-          Container(
-            width: size.width * 0.6,
-            child: Text(
-              "CHEESE TOUCH",
-              style: TextStyle(
-                  fontSize: 64,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.asset("assets/images/cheese.png"),
+            Container(
+              width: size.width * 0.6,
+              child: Text(
+                "CHEESE TOUCH",
+                style: TextStyle(
+                    fontSize: 64,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          LoginButton(
-            text: "Login",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return LoginScreen();
-                  },
-                ),
-              );
-            },
-          ),
-          RegisterButton(
-            text: "Sign Up",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return RegisterScreen();
-                  },
-                ),
-              );
-            },
-          )
-        ],
+            LoginButton(
+              text: "Login",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
+              },
+            ),
+            RegisterButton(
+              text: "Sign Up",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return RegisterScreen();
+                    },
+                  ),
+                );
+              },
+            )
+          ],
+        ),
       ),
     );
   }
