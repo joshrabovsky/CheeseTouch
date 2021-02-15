@@ -1,4 +1,4 @@
-import 'package:CheeseTouch/Components/body.dart';
+import 'package:CheeseTouch/Screens/Welcome/Components/body.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {

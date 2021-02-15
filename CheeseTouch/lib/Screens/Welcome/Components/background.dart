@@ -23,7 +23,6 @@ class Background extends StatelessWidget {
             width: size.width,
             fit: BoxFit.fill,
           )),
-          Positioned(top: 150, child: Image.asset("assets/images/cheese.png")),
           child,
         ],
       ),
