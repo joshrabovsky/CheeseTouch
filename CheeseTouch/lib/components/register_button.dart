@@ -32,7 +32,7 @@ class RegisterButton extends StatelessWidget {
         child: FlatButton(
             padding: EdgeInsets.symmetric(vertical: 15, horizontal: 45),
             color: kPrimaryColor,
-            onPressed: () {},
+            onPressed: press,
             child: Text(
               text,
               style: TextStyle(

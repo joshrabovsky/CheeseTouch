@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 class LoginButton extends StatelessWidget {
   final Function press;
   final String text;
+  final Color color, textColor;
   const LoginButton({
     Key key,
     this.press,
     this.text,
+    this.color,
+    this.textColor,
   }) : super(key: key);
 
   @override
@@ -31,7 +34,7 @@ class LoginButton extends StatelessWidget {
         child: FlatButton(
             padding: EdgeInsets.symmetric(vertical: 15, horizontal: 45),
             color: Colors.white,
-            onPressed: () {},
+            onPressed: press,
             child: Text(
               text,
               style: TextStyle(
