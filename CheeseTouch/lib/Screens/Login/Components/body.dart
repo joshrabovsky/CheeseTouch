@@ -4,6 +4,7 @@ import 'package:CheeseTouch/Components/back_button.dart';
 import 'package:CheeseTouch/Components/background.dart';
 import 'package:CheeseTouch/Components/login_button.dart';
 import 'package:CheeseTouch/Components/logo.dart';
+import 'package:CheeseTouch/Screens/Register/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -59,7 +60,16 @@ class Body extends StatelessWidget {
                       ],
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return RegisterScreen();
+                        },
+                      ),
+                    );
+                  },
                 )),
             LoginButton(
               text: "Login",

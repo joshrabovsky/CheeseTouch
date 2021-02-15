@@ -1,0 +1,56 @@
+import 'package:CheeseTouch/Components/auth_input.dart';
+import 'package:CheeseTouch/Components/auth_password.dart';
+import 'package:CheeseTouch/Components/back_button.dart';
+import 'package:CheeseTouch/Components/background.dart';
+import 'package:CheeseTouch/Components/login_button.dart';
+import 'package:CheeseTouch/Components/logo.dart';
+import 'package:CheeseTouch/Components/register_button.dart';
+import 'package:flutter/material.dart';
+
+class Body extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SingleChildScrollView(
+      child: Container(
+        width: double.infinity,
+        height: size.height,
+        child: Background(
+            child: Column(
+          children: [
+            Logo(),
+            BackButtonCustom(),
+            Container(
+              margin: EdgeInsets.all(30),
+              width: size.width * 0.8,
+              child: Text(
+                "Create an account to play!",
+                style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            AuthInput(
+              hintText: "Username",
+            ),
+            AuthPassword(
+              hintText: "Password",
+            ),
+            AuthPassword(
+              hintText: "Confirm password",
+            ),
+            AuthInput(
+              hintText: "Phone Number",
+            ),
+            RegisterButton(
+              text: "Register",
+              press: () {},
+            )
+          ],
+        )),
+      ),
+    );
+  }
+}

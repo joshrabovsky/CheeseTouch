@@ -1,4 +1,5 @@
 import 'package:CheeseTouch/Screens/Login/login_screen.dart';
+import 'package:CheeseTouch/Screens/Register/register_screen.dart';
 import 'package:CheeseTouch/components/background.dart';
 import 'package:CheeseTouch/components/login_button.dart';
 import 'package:CheeseTouch/components/register_button.dart';
@@ -39,7 +40,16 @@ class Body extends StatelessWidget {
           ),
           RegisterButton(
             text: "Sign Up",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return RegisterScreen();
+                  },
+                ),
+              );
+            },
           )
         ],
       ),

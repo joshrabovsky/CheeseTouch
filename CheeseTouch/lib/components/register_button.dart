@@ -14,6 +14,7 @@ class RegisterButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 20),
       width: size.width * 0.8,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white, width: 2.0),
