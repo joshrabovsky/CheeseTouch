@@ -8,18 +8,17 @@ import "profiles.dart";
 
 class DrawerMenu extends StatelessWidget {
   var screenName;
-  
+
   void closeMenu(BuildContext ctx) {
     Navigator.of(ctx).pop();
   }
- 
+
   void selectMenuOption(BuildContext ctx) {
     Navigator.of(ctx).pushReplacement(
       MaterialPageRoute(
         builder: (_) {
           return screenName;
         },
-        
       ),
     );
   }
@@ -61,12 +60,13 @@ class DrawerMenu extends StatelessWidget {
                         'Status',
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .headline3
                             .apply(color: Colors.white),
                         textAlign: TextAlign.left,
                       ),
                     ),
-                    onTap: () {screenName = StarterBody();
+                    onTap: () {
+                      screenName = StarterBody();
                       selectMenuOption(context);
                       print("startertapped");
                     },
@@ -87,7 +87,7 @@ class DrawerMenu extends StatelessWidget {
                         'Leaderboard',
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .headline3
                             .apply(color: Colors.white),
                         textAlign: TextAlign.left,
                       ),
@@ -113,7 +113,7 @@ class DrawerMenu extends StatelessWidget {
                         'Profile',
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .headline3
                             .apply(color: Colors.white),
                         textAlign: TextAlign.left,
                       ),
@@ -139,7 +139,7 @@ class DrawerMenu extends StatelessWidget {
                         'How to Play',
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .headline3
                             .apply(color: Colors.white),
                         textAlign: TextAlign.left,
                       ),
@@ -170,7 +170,7 @@ class DrawerMenu extends StatelessWidget {
                         'Logout ',
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .headline3
                             .apply(color: Colors.white),
                       ),
                       Image.asset('assets/images/logout.png')
@@ -179,8 +179,8 @@ class DrawerMenu extends StatelessWidget {
                 ),
                 onTap: () {
                   screenName = WelcomeScreen();
-                      selectMenuOption(context);
-                      print("log out tapped");
+                  selectMenuOption(context);
+                  print("log out tapped");
                 },
               ),
             ),

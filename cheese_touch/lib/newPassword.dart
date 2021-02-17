@@ -1,5 +1,7 @@
 import 'package:CheeseTouchApp/constants.dart';
 import 'package:flutter/material.dart';
+import 'drawer.dart';
+import 'appbar.dart';
 
 class Password extends StatelessWidget {
   @override
@@ -8,15 +10,14 @@ class Password extends StatelessWidget {
   }
 }
 
-class NewPassword extends StatefulWidget {
-  @override
-  _NewPasswordState createState() => _NewPasswordState();
-}
-
-class _NewPasswordState extends State<NewPassword> {
+class NewPassword extends StatelessWidget {
+  static const routeName = "/newpassword";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+            preferredSize: Size.fromHeight(70.0), child: MyAppBar(true)),
+      endDrawer: DrawerMenu(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -31,22 +32,25 @@ class _NewPasswordState extends State<NewPassword> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 180,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          labelText: "Enter phone number",
-                          labelStyle: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromRGBO(192, 192, 192, 100),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.white),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    labelText: "Enter phone number",
+                    labelStyle: Theme.of(context)
+                        .textTheme
+                        .subtitle1
+                        .apply(color: Colors.grey),
+                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle1
+                      .apply(color: Colors.white),
                 ),
               ),
               Container(
@@ -90,7 +94,7 @@ Widget buildPopupDialog(BuildContext context) {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       contentPadding: EdgeInsets.all(0),
       content: Container(
-          height: 300,
+          height: 200,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -106,6 +110,12 @@ Widget buildPopupDialog(BuildContext context) {
                   ),
                 ),
               ),
+              Text("123-456-789",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle1
+                      .apply(color: Colors.black)),
               Container(
                 margin: EdgeInsets.only(bottom: 0, top: 10, left: 0, right: 0),
                 padding: EdgeInsets.all(10),
@@ -118,11 +128,17 @@ Widget buildPopupDialog(BuildContext context) {
                   children: [
                     Text(
                       "A link was sent to your number. Click on it to rest password.",
-                      style: TextStyle(color: Colors.black, fontSize: 20),
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle1
+                          .apply(color: Colors.black),
                       textAlign: TextAlign.start,
                     ),
                     Text("Didn't receive a message? Click to resend link",
-                        style: TextStyle(color: Colors.white, fontSize: 20)),
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle1
+                            .apply(color: Colors.white)),
                   ],
                 ),
               ),
