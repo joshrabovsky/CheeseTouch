@@ -10,7 +10,7 @@ class StarterBody extends StatefulWidget {
 }
 
 class _StarterBodyState extends State<StarterBody> {
-  var isInfected = true;
+  var isInfected = false;
 
   Map<String, Object> starterDesignInfected = {
     "status": "INFECTED",
