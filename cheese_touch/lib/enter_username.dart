@@ -116,7 +116,8 @@ Widget buildPopupDialog(BuildContext context) {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     contentPadding: EdgeInsets.all(0),
     content: Container(
-      height: 300,
+      height: 275,
+      width: MediaQuery.of(context).size.width * 0.6,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -134,8 +135,8 @@ Widget buildPopupDialog(BuildContext context) {
           ),
           Image.asset(
             imageUrl,
-            height: 150,
-            width: 150,
+            height: 100,
+            width: 100,
             fit: BoxFit.fitWidth,
           ),
           Container(

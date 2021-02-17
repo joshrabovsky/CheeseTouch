@@ -10,10 +10,10 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      padding: const EdgeInsets.only(),
-      height: size.height,
-      width: double.infinity,
+    return 
+    Container(
+      margin: const EdgeInsets.all(0),
+      width: MediaQuery.of(context).size.width,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -21,7 +21,7 @@ class Background extends StatelessWidget {
               child: Image.asset(
             "assets/images/plainbackground.png",
             width: size.width,
-            fit: BoxFit.fill,
+            fit: BoxFit.fitWidth,
           )),
           child,
         ],
