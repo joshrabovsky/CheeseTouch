@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "917953646716",
+    "project_id": "cheesetouch-e362e",
+    "storage_bucket": "cheesetouch-e362e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917953646716:android:47fd05be1347d85414f9f9",
+        "android_client_info": {
+          "package_name": "com.example.CheeseTouch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917953646716-rpa243sck3amr80bdj02rh7mt611mlnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLOiFWNT2y1cpF5Rj6X2H12dfhWLDtBZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917953646716-rpa243sck3amr80bdj02rh7mt611mlnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

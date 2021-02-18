@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+
 import '../../components/auth_input.dart';
 import '../../components/auth_password.dart';
 import '../../components/back_button.dart';
@@ -8,8 +10,16 @@ import '../register/register_screen.dart';
 import '../instructions/starter_body.dart';
 import 'package:flutter/material.dart';
 
-class Body extends StatelessWidget {
+class LoginBody extends StatefulWidget {
+  @override
+  _LoginBodyState createState() => _LoginBodyState();
+}
+
+class _LoginBodyState extends State<LoginBody> {
   var screenName;
+  String _email, _password;
+  final auth = FirebaseAuth.instance;
+
   void selectMenuOption(BuildContext ctx) {
     Navigator.of(ctx).pushReplacement(
       MaterialPageRoute(
@@ -46,9 +56,19 @@ class Body extends StatelessWidget {
             ),
             AuthInput(
               hintText: "Username",
+              change: (value) {
+                setState(() {
+                  _email = value.trim();
+                });
+              },
             ),
             AuthPassword(
               hintText: "Password",
+              change: (value) {
+                setState(() {
+                  _password = value.trim();
+                });
+              },
             ),
             Container(
                 margin: EdgeInsets.only(top: 100),
@@ -86,6 +106,8 @@ class Body extends StatelessWidget {
             LoginButton(
               text: "Login",
               press: () {
+                auth.signInWithEmailAndPassword(
+                    email: _email, password: _password);
                 screenName = StarterBody();
                 selectMenuOption(context);
                 print("register tapped");

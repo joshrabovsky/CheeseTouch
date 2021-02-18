@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+
 import '../instructions_new/how_to_play_new_player.dart';
 import '../../components/auth_input.dart';
 import '../../components/auth_password.dart';
@@ -8,8 +10,16 @@ import '../../components/logo.dart';
 import '../../components/register_button.dart';
 import 'package:flutter/material.dart';
 
-class RegisterBody extends StatelessWidget {
+class RegisterBody extends StatefulWidget {
+  @override
+  _RegisterBodyState createState() => _RegisterBodyState();
+}
+
+class _RegisterBodyState extends State<RegisterBody> {
   var screenName;
+  String _email, _password, _confirmPassword;
+  final auth = FirebaseAuth.instance;
+
   void selectMenuOption(BuildContext ctx) {
     Navigator.of(ctx).pushReplacement(
       MaterialPageRoute(
@@ -46,9 +56,19 @@ class RegisterBody extends StatelessWidget {
             ),
             AuthInput(
               hintText: "Username",
+              change: (value) {
+                setState(() {
+                  _email = value.trim();
+                });
+              },
             ),
             AuthPassword(
               hintText: "Password",
+              change: (value) {
+                setState(() {
+                  _password = value.trim();
+                });
+              },
             ),
             AuthPassword(
               hintText: "Confirm password",
@@ -59,6 +79,8 @@ class RegisterBody extends StatelessWidget {
             RegisterButton(
               text: "Register",
               press: () {
+                auth.createUserWithEmailAndPassword(
+                    email: _email, password: _password);
                 screenName = HowtoPlayWelcomeScreen();
                 selectMenuOption(context);
                 print("log out tapped");

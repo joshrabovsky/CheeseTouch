@@ -1,4 +1,5 @@
 import 'package:CheeseTouchApp/screens/referral/referral_link_pop_up.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'screens/main/main_screen.dart';
 import 'components/constants.dart';
@@ -7,7 +8,9 @@ import 'screens/profile/profiles.dart';
 import 'screens/password/new_password.dart';
 import 'screens/referral/referral_link_pop_up.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

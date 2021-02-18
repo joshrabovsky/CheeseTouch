@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class AuthPassword extends StatefulWidget {
   final String hintText;
+  final Function change;
   const AuthPassword({
     Key key,
     this.hintText,
+    this.change,
   }) : super(key: key);
 
   @override
@@ -34,6 +36,7 @@ class _AuthPasswordState extends State<AuthPassword> {
         ),
         child: TextField(
           obscureText: password,
+          onChanged: this.widget.change,
           textAlignVertical: TextAlignVertical.center,
           decoration: InputDecoration(
             suffixIcon: IconButton(

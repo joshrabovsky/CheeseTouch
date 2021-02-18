@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+
 import '../screens/instructions/how_to_play.dart';
 import '../screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +9,7 @@ import '../screens/leaderboard/leaderboard_body.dart';
 import '../screens/profile/profiles.dart';
 
 class DrawerMenu extends StatelessWidget {
+  final auth = FirebaseAuth.instance;
   var screenName;
 
   void closeMenu(BuildContext ctx) {
@@ -178,6 +181,7 @@ class DrawerMenu extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
+                  auth.signOut();
                   screenName = MainScreen();
                   selectMenuOption(context);
                   print("log out tapped");

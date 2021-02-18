@@ -12,11 +12,8 @@ class MyAppBar extends StatelessWidget {
     return AppBar(
       backgroundColor: Color(0xff231651),
       automaticallyImplyLeading: backButton,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[Logo()],
-      ),
+      title: Logo(),
+      titleSpacing: 0,
     );
   }
 }

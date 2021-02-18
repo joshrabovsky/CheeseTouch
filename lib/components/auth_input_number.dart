@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class AuthInputNumber extends StatelessWidget {
   final String hintText;
+  final Function change;
   const AuthInputNumber({
     Key key,
     this.hintText,
+    this.change,
   }) : super(key: key);
 
   @override
@@ -41,6 +43,7 @@ class AuthInputNumber extends StatelessWidget {
           ),
           style:
               Theme.of(context).textTheme.headline3.apply(color: Colors.white),
+          onChanged: change,
         ));
   }
 }
