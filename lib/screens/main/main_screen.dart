@@ -1,11 +1,11 @@
-import 'body.dart';
+import 'main_body.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Body(),
+      body: MainBody(),
     );
   }
 }

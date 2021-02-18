@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 
-import "./enter_username.dart";
-import "./appbar.dart";
-import "./drawer.dart";
+import '../username/enter_username.dart';
+import '../../components/appbar.dart';
+import '../../components/drawer.dart';
 
 class StarterBody extends StatefulWidget {
   @override
@@ -68,7 +68,10 @@ class _StarterBodyState extends State<StarterBody> {
                       children: [
                         Text(
                           "STATUS",
-                          style: Theme.of(context).textTheme.headline2.apply(color: Colors.black),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline2
+                              .apply(color: Colors.black),
                         ),
                         Divider(
                             height: 20,
@@ -80,7 +83,10 @@ class _StarterBodyState extends State<StarterBody> {
                           isInfected
                               ? starterDesignInfected["status"]
                               : starterDesignNormal["status"],
-                          style: Theme.of(context).textTheme.headline1.apply(color: Colors.black),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline1
+                              .apply(color: Colors.black),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -116,7 +122,10 @@ class _StarterBodyState extends State<StarterBody> {
                           ),
                           title: Text(
                             "Current points: 15151",
-                            style: Theme.of(context).textTheme.headline3.apply(color: Colors.black),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline3
+                                .apply(color: Colors.black),
                           ),
                         ),
                         ListTile(
@@ -130,7 +139,10 @@ class _StarterBodyState extends State<StarterBody> {
                           ),
                           title: Text(
                             "Current ranking: 15/2000",
-                            style: Theme.of(context).textTheme.headline3.apply(color: Colors.black),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline3
+                                .apply(color: Colors.black),
                           ),
                         ),
                       ],

@@ -1,11 +1,11 @@
-import 'auth_input.dart';
-import 'auth_password.dart';
-import 'back_button.dart';
-import 'background.dart';
-import 'login_button.dart';
-import 'logo.dart';
-import 'register_screen.dart';
-import 'starter_body.dart';
+import '../../components/auth_input.dart';
+import '../../components/auth_password.dart';
+import '../../components/back_button.dart';
+import '../../components/background.dart';
+import '../../components/login_button.dart';
+import '../../components/logo.dart';
+import '../register/register_screen.dart';
+import '../instructions/starter_body.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {

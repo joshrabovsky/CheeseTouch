@@ -1,4 +1,4 @@
-import 'welcomeScreen.dart';
+import '../screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class BackButtonCustom extends StatelessWidget {
@@ -14,7 +14,7 @@ class BackButtonCustom extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return WelcomeScreen();
+              return MainScreen();
             },
           ),
         );

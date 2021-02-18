@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
-import "appbar.dart";
-import "drawer.dart";
+import '../../components/appbar.dart';
+import '../../components/drawer.dart';
 
 class LeaderboardBody extends StatefulWidget {
   @override

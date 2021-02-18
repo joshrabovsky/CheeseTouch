@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
-import 'appbar.dart';
-import 'profiles.dart';
+import '../../components/drawer.dart';
+import '../../components/appbar.dart';
 
 class Password extends StatelessWidget {
   @override
@@ -21,7 +20,7 @@ class _NewPasswordState extends State<NewPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-            preferredSize: Size.fromHeight(70.0), child: MyAppBar(true)),
+          preferredSize: Size.fromHeight(70.0), child: MyAppBar(true)),
       endDrawer: DrawerMenu(),
       body: Stack(
         children: <Widget>[

@@ -49,17 +49,16 @@ class _AuthPasswordState extends State<AuthPassword> {
             ),
             contentPadding: EdgeInsets.symmetric(horizontal: 20),
             hintText: this.widget.hintText,
-            hintStyle: Theme.of(context).textTheme.headline4.apply(color: Colors.grey),
+            hintStyle:
+                Theme.of(context).textTheme.headline4.apply(color: Colors.grey),
             border: InputBorder.none,
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             disabledBorder: InputBorder.none,
           ),
-          style: Theme.of(context)
-                    .textTheme
-                    .headline3
-                    .apply(color: Colors.white),
+          style:
+              Theme.of(context).textTheme.headline3.apply(color: Colors.white),
         ));
   }
 }

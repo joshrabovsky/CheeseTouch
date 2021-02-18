@@ -1,8 +1,8 @@
-import 'package:CheeseTouchApp/drawer.dart';
+import 'package:CheeseTouchApp/components/drawer.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'starter_body.dart';
-import 'appbar.dart';
+import '../instructions/starter_body.dart';
+import '../../components/appbar.dart';
 
 class FriendPopUp extends StatelessWidget {
   Widget build(BuildContext context) {

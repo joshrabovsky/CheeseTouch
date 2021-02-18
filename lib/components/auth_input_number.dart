@@ -1,9 +1,9 @@
 import 'constants.dart';
 import 'package:flutter/material.dart';
 
-class AuthInput extends StatelessWidget {
+class AuthInputNumber extends StatelessWidget {
   final String hintText;
-  const AuthInput({
+  const AuthInputNumber({
     Key key,
     this.hintText,
   }) : super(key: key);
@@ -27,20 +27,20 @@ class AuthInput extends StatelessWidget {
           ],
         ),
         child: TextField(
+          keyboardType: TextInputType.number,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 20),
             hintText: this.hintText,
-            hintStyle: Theme.of(context).textTheme.headline4.apply(color: Colors.grey),
+            hintStyle:
+                Theme.of(context).textTheme.headline4.apply(color: Colors.grey),
             border: InputBorder.none,
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             disabledBorder: InputBorder.none,
           ),
-          style: Theme.of(context)
-                    .textTheme
-                    .headline3
-                    .apply(color: Colors.white),
+          style:
+              Theme.of(context).textTheme.headline3.apply(color: Colors.white),
         ));
   }
 }

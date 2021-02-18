@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'starter_body.dart';
+import '../instructions/starter_body.dart';
 
 class App extends StatelessWidget {
   @override
@@ -13,6 +13,7 @@ class App extends StatelessWidget {
     );
   }
 }
+
 class MyHome extends StatefulWidget {
   @override
   _MyHomeState createState() => _MyHomeState();
@@ -21,10 +22,8 @@ class MyHome extends StatefulWidget {
 class _MyHomeState extends State<MyHome> {
   final Color mainColor = Color(0xff231651);
 
-
   @override
   Widget build(BuildContext context) {
-
     return StarterBody();
   }
 }

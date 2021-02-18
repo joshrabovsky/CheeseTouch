@@ -1,11 +1,11 @@
-import 'package:CheeseTouchApp/referral_link_pop_up.dart';
+import 'package:CheeseTouchApp/screens/referral/referral_link_pop_up.dart';
 
-import 'welcomeScreen.dart';
-import 'constants.dart';
+import 'screens/main/main_screen.dart';
+import 'components/constants.dart';
 import 'package:flutter/material.dart';
-import 'profiles.dart';
-import 'newPassword.dart';
-import 'referral_link_pop_up.dart';
+import 'screens/profile/profiles.dart';
+import 'screens/password/new_password.dart';
+import 'screens/referral/referral_link_pop_up.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'CheeseTouch',
-        home: WelcomeScreen(),
+        home: MainScreen(),
         theme: ThemeData(
           fontFamily: "Inconsolata",
           primaryColor: kPrimaryColor,

@@ -1,11 +1,11 @@
-import 'instructions.dart';
-import 'auth_input.dart';
-import 'auth_password.dart';
-import 'auth_input_number.dart';
-import 'back_button.dart';
-import 'background.dart';
-import 'logo.dart';
-import 'register_button.dart';
+import '../instructions_new/how_to_play_new_player.dart';
+import '../../components/auth_input.dart';
+import '../../components/auth_password.dart';
+import '../../components/auth_input_number.dart';
+import '../../components/back_button.dart';
+import '../../components/background.dart';
+import '../../components/logo.dart';
+import '../../components/register_button.dart';
 import 'package:flutter/material.dart';
 
 class RegisterBody extends StatelessWidget {

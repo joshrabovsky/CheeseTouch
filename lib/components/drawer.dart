@@ -1,10 +1,10 @@
-import 'how_to_play.dart';
-import 'welcomeScreen.dart';
+import '../screens/instructions/how_to_play.dart';
+import '../screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import "starter_body.dart";
-import "leaderboard_body.dart";
-import "profiles.dart";
+import '../screens/instructions/starter_body.dart';
+import '../screens/leaderboard/leaderboard_body.dart';
+import '../screens/profile/profiles.dart';
 
 class DrawerMenu extends StatelessWidget {
   var screenName;
@@ -178,7 +178,7 @@ class DrawerMenu extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  screenName = WelcomeScreen();
+                  screenName = MainScreen();
                   selectMenuOption(context);
                   print("log out tapped");
                 },

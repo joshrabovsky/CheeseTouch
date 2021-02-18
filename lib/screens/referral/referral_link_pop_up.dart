@@ -1,8 +1,8 @@
-import 'package:CheeseTouchApp/profiles.dart';
+import 'package:CheeseTouchApp/screens/profile/profiles.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'drawer.dart';
-import 'appbar.dart';
+import '../../components/drawer.dart';
+import '../../components/appbar.dart';
 
 class ReferralPopUp extends StatelessWidget {
   static const routeName = "/referral";

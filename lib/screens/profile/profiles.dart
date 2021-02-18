@@ -1,8 +1,8 @@
-import 'newPassword.dart';
+import '../password/new_password.dart';
 import 'package:flutter/material.dart';
-import 'appbar.dart';
-import 'drawer.dart';
-import 'referral_link_pop_up.dart';
+import '../../components/appbar.dart';
+import '../../components/drawer.dart';
+import '../referral/referral_link_pop_up.dart';
 
 class Profile extends StatelessWidget {
   static const routeName = "/profile";

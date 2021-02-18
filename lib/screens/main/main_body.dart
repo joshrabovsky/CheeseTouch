@@ -1,11 +1,11 @@
-import 'login_screen.dart';
-import 'register_screen.dart';
-import 'background.dart';
-import 'login_button.dart';
-import 'register_button.dart';
+import '../login/login_screen.dart';
+import '../register/register_screen.dart';
+import '../../components/background.dart';
+import '../../components/login_button.dart';
+import '../../components/register_button.dart';
 import 'package:flutter/material.dart';
 
-class Body extends StatelessWidget {
+class MainBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size; // Total height and width

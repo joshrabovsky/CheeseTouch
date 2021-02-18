@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'starter_body.dart';
-import 'appbar.dart';
-import 'drawer.dart';
+import '../instructions/starter_body.dart';
+import '../../components/appbar.dart';
+import '../../components/drawer.dart';
+
 // Only difference between these 2 classes is one doesn't have a drawer (welcome screen) and the other one does (normal how to play page)
 class HowtoPlayWelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -9,15 +10,14 @@ class HowtoPlayWelcomeScreen extends StatelessWidget {
     var screenName;
 
     void selectMenuOption(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return screenName;
-        },
-        
-      ),
-    );
-  }
+      Navigator.of(ctx).push(
+        MaterialPageRoute(
+          builder: (_) {
+            return screenName;
+          },
+        ),
+      );
+    }
 
     return Scaffold(
       appBar: PreferredSize(
@@ -78,7 +78,8 @@ class HowtoPlayWelcomeScreen extends StatelessWidget {
               ),
               FlatButton(
                   color: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
                   child: Text(
                     'Let\'s Start!',
                     textAlign: TextAlign.center,
@@ -87,7 +88,9 @@ class HowtoPlayWelcomeScreen extends StatelessWidget {
                         .headline3
                         .apply(color: Color(0xff231651)),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.02, horizontal: MediaQuery.of(context).size.width * 0.30),
+                  padding: EdgeInsets.symmetric(
+                      vertical: MediaQuery.of(context).size.height * 0.02,
+                      horizontal: MediaQuery.of(context).size.width * 0.30),
                   onPressed: () {
                     screenName = StarterBody();
                     selectMenuOption(context);
@@ -99,4 +102,4 @@ class HowtoPlayWelcomeScreen extends StatelessWidget {
       ),
     );
   }
-}                               
+}

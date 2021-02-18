@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+import 'logo.dart';
+
 class MyAppBar extends StatelessWidget {
   var backButton = false;
 
@@ -13,15 +15,7 @@ class MyAppBar extends StatelessWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              child: Image.asset(
-                "assets/images/appbarlogo.png",
-              ),
-            ),
-          ),
-        ],
+        children: <Widget>[Logo()],
       ),
     );
   }
