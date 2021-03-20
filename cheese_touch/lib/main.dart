@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import "./leaderboard_body.dart";
 import "./appbar.dart";
 
-// Pointing to master
+// Pointing to masterr
 void main() {
   runApp(MyApp());
 }
