@@ -8,7 +8,6 @@ import 'screens/profile/profiles.dart';
 import 'screens/password/new_password.dart';
 import 'screens/referral/referral_link_pop_up.dart';
 
-// IT WORKED HAHAHA
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
