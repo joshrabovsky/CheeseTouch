@@ -1,4 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:email_validator/email_validator.dart';
 
 import '../instructions_new/how_to_play_new_player.dart';
 import '../../components/auth_input.dart';
@@ -17,7 +19,7 @@ class RegisterBody extends StatefulWidget {
 
 class _RegisterBodyState extends State<RegisterBody> {
   var screenName;
-  String _email, _password, _confirmPassword;
+  String _username, _email, _password, _confirmPassword, _phone;
   final auth = FirebaseAuth.instance;
 
   void selectMenuOption(BuildContext ctx) {
@@ -56,6 +58,14 @@ class _RegisterBodyState extends State<RegisterBody> {
             ),
             AuthInput(
               hintText: "Username",
+              change: (value) {
+                setState(() {
+                  _email = value.trim();
+                });
+              },
+            ),
+            AuthInput(
+              hintText: "Email",
               change: (value) {
                 setState(() {
                   _email = value.trim();
