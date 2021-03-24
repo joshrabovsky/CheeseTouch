@@ -6,7 +6,7 @@ import '../../components/drawer.dart';
 // Only difference between these 2 classes is one doesn't have a drawer (welcome screen) and the other one does (normal how to play page)
 class HowtoPlayWelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
-    String playerName = "ghuang72";
+    String playerName = "WFN";
     var screenName;
 
     void selectMenuOption(BuildContext ctx) {

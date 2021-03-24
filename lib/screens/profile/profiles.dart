@@ -26,7 +26,7 @@ class CheeseTouch extends StatelessWidget {
     );
   }
 
-  final List<String> invites = ["hyuan", "founders", "rowley"];
+  final List<String> invites = ["N/A"];
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +64,13 @@ class CheeseTouch extends StatelessWidget {
                           shape: BoxShape.circle,
                           image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage('assets/images/avatar.png'),
+                            image: AssetImage('assets/images/cheese.png'),
                           ),
                         ),
                       ),
                       SizedBox(width: 20),
                       Text(
-                        'Kev_Cubanito',
+                        'WFN',
                         style: Theme.of(context)
                             .textTheme
                             .headline3
@@ -111,7 +111,7 @@ class CheeseTouch extends StatelessWidget {
                             .apply(color: Colors.white),
                       ),
                       Text(
-                        '18300',
+                        '0',
                         style: Theme.of(context)
                             .textTheme
                             .headline4
@@ -152,7 +152,7 @@ class CheeseTouch extends StatelessWidget {
                             .apply(color: Colors.white),
                       ),
                       Text(
-                        '299',
+                        '0',
                         style: Theme.of(context)
                             .textTheme
                             .headline4
@@ -182,7 +182,7 @@ class CheeseTouch extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Leaderboard position:  ',
+                        'Leaderboard position: 16',
                         style: Theme.of(context)
                             .textTheme
                             .headline3

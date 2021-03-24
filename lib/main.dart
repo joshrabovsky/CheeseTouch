@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'screens/profile/profiles.dart';
 import 'screens/password/new_password.dart';
 import 'screens/referral/referral_link_pop_up.dart';
+import "package:provider/provider.dart";
+import "./screens/leaderboard/provider.dart";
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +20,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (ctx) {
+              return UserProvider();
+            },
+          )
+        ],
+        child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'CheeseTouch',
         home: MainScreen(),
@@ -76,6 +86,6 @@ class MyApp extends StatelessWidget {
           ReferralPopUp.routeName: (ctx) {
             return ReferralPopUp();
           }
-        });
+        }));
   }
 }

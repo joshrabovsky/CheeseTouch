@@ -5,7 +5,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: RegisterBody(),
+      body: SingleChildScrollView(child: RegisterBody()),
     );
   }
 }

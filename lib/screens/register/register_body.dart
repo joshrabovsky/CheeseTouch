@@ -38,22 +38,24 @@ class _RegisterBodyState extends State<RegisterBody> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: size.height + 25,
+        height: size.height + 200,
         child: Background(
             child: Column(
           children: [
             Logo(),
             BackButtonCustom(),
-            Container(
-              margin: EdgeInsets.all(10),
-              width: size.width * 0.8,
-              child: Text(
-                "Create an account to play!",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline2
-                    .apply(color: Colors.white),
-                textAlign: TextAlign.center,
+            SingleChildScrollView(
+              child: Container(
+                margin: EdgeInsets.all(10),
+                width: size.width * 0.8,
+                child: Text(
+                  "Create an account to play!",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline2
+                      .apply(color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
             AuthInput(
@@ -95,7 +97,7 @@ class _RegisterBodyState extends State<RegisterBody> {
                 selectMenuOption(context);
                 print("log out tapped");
               },
-            )
+            ),
           ],
         )),
       ),

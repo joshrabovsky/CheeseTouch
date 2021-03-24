@@ -115,7 +115,7 @@ Widget buildPopupDialog(BuildContext context) {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
     contentPadding: EdgeInsets.all(0),
     content: Container(
-      height: 275,
+      height: 300,
       width: MediaQuery.of(context).size.width * 0.6,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

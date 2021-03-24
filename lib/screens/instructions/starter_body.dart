@@ -10,7 +10,7 @@ class StarterBody extends StatefulWidget {
 }
 
 class _StarterBodyState extends State<StarterBody> {
-  var isInfected = true;
+  var isInfected = false;
 
   Map<String, Object> starterDesignInfected = {
     "status": "INFECTED",
@@ -121,7 +121,7 @@ class _StarterBodyState extends State<StarterBody> {
                             ),
                           ),
                           title: Text(
-                            "Current points: 15151",
+                            "Current points: 0",
                             style: Theme.of(context)
                                 .textTheme
                                 .headline3
@@ -138,7 +138,7 @@ class _StarterBodyState extends State<StarterBody> {
                             ),
                           ),
                           title: Text(
-                            "Current ranking: 15/2000",
+                            "Current ranking: 16/2000",
                             style: Theme.of(context)
                                 .textTheme
                                 .headline3
